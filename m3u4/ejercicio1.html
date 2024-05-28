@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ejercicio1</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .square {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #square1 {
+        background-color: red;
+    }
+    #square2 {
+        background-color: green;
+    }
+    #square3 {
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+
+<div class="square" id="square1"></div>
+<div class="square" id="square2"></div>
+<div class="square" id="square3"></div>
+
+<script>
+    const square1 = document.getElementById('square1');
+    const square2 = document.getElementById('square2');
+    const square3 = document.getElementById('square3');
+
+    square1.addEventListener('click', () => changeBackgroundColor('lightblue'));
+    square2.addEventListener('click', () => changeBackgroundColor('lightgreen'));
+    square3.addEventListener('click', () => changeBackgroundColor('lightcoral'));
+
+    function changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
+
+</body>
+</html>
